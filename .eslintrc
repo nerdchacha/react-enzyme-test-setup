@@ -1,11 +1,15 @@
 {
+  "parser": "babel-eslint",
   "extends": [
+    "standard",
+    "standard-react",
     "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:react/recommended"
   ],
   "plugins": [
-    "react"
+    "react",
+    "babel",
+    "mocha"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
@@ -13,6 +17,9 @@
     "ecmaFeatures": {
       "jsx": true
     }
+  },
+  "globals": {
+    "__DEV__": true
   },
   "env": {
     "es6": true,
@@ -34,6 +41,7 @@
     "no-alert": 0,
     "no-lone-blocks": 0,
     "jsx-quotes": 1,
+    "comma-dangle": ["warn", "always-multiline"],
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
     "react/forbid-prop-types": [1, {"forbid": ["any"]}],
     "react/jsx-boolean-value": 1,
