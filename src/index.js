@@ -3,6 +3,5 @@ import React from 'react'
 import {render} from 'react-dom';
 import App from './components/App'
 
-let app = document.getElementById('main')
-console.log('working')
+let app = document.getElementById('app')
 render(<App />, app)

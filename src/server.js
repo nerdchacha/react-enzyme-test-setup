@@ -8,6 +8,8 @@ import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import logger from './util/logger'
 import { port } from './config'
+import jade from 'jade'
+import assets from './assets'
 
 const server = global.server = express()
 let morgan = require('morgan')
@@ -46,7 +48,15 @@ server.get('/health-check', (req, res) => {
 })
 
 server.get('*', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'public/assets/index.html'))
+  console.log(assets.index.js)
+  const template = jade.compile(require('./view/index.jade.js'))
+  const data = {
+    title: 'React Redux BAsic App',
+    description: 'A simple started app for react redux apps',
+    entry: assets.index.js,
+    stylesheet: assets.index.css,
+  }
+  res.send(template(data))
 })
 
 //

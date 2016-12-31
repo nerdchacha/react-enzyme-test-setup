@@ -11,7 +11,7 @@ require('dotenv').config();
 import path from 'path';
 import webpack from 'webpack';
 import extend from 'extend';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import AssetsPlugin from 'assets-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import merge from 'lodash/merge'
 
@@ -89,7 +89,7 @@ const config = {
 const clientConfig = extend(true,
   {}, config, {
   entry: {
-    app: path.join(__dirname, '../src/index.js'),
+    index: path.join(__dirname, '../src/index.js'),
   },
   output: {
     path: path.join(__dirname, '../build/public/assets/'),
@@ -120,14 +120,12 @@ const clientConfig = extend(true,
         },
       }),
       new webpack.optimize.AggressiveMergingPlugin(),
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, '../src/view/index.html')
-      })
-    ] : [
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, '../src/view/index.html')
-      })
-    ]),
+    ] : []),
+    new AssetsPlugin({
+      path: path.join(__dirname, '../build'),
+      filename: 'assets.js',
+      processOutput: x => `module.exports = ${JSON.stringify(x)};`,
+    }),
   ],
 });
 
