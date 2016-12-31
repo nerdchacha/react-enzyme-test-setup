@@ -1,5 +1,20 @@
 ## React-Redux-Startup
 
+A simple startup application for production grade projects
+
+The project has the following things incorporated
+
+1. Express server running through webpack middleware
+2. esling configured with some defult rules
+3. babel-node setup to write full ES^ code in node
+4. precommit hook setup to run custom script before any git commit
+5. webpack plugins configured to create optimized and minimized production build
+6. basic redux code setup
+7. suppoort for jade to use server side rendering if required
+8. dotevn setup, to set environment variables
+
+____
+
 **`npm run start`** to run the server in development mode through webpack middleware
 To access the server, navigate to `http://localhost:3001`
 
