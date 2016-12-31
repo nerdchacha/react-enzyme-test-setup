@@ -17,6 +17,7 @@ html(class="no-js", lang="")
     if stylesheet
       link(media="all", rel="stylesheet", href=stylesheet)
   body
+    h1 React Redux Started Kit
     #app!= body
     script(src=entry)
 `

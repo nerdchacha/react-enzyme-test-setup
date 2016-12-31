@@ -48,7 +48,6 @@ server.get('/health-check', (req, res) => {
 })
 
 server.get('*', (req, res, next) => {
-  console.log(assets.index.js)
   const template = jade.compile(require('./view/index.jade.js'))
   const data = {
     title: 'React Redux BAsic App',

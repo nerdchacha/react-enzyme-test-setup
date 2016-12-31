@@ -5,7 +5,7 @@ const PrettyError = require('pretty-error')
 class ConsoleTransport extends winston.Transport {
   constructor (options) {
     super(options)
-    this.name = 'winston-ratecity-console'
+    this.name = 'winston-ttn-console'
     this.level = options.level || 'info'
     this.prettyError = new PrettyError()
     this.prettyError.skipNodeFiles()
