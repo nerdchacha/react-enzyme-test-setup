@@ -1,5 +1,6 @@
-export const SET_TIMEOUT = 'SET_TIMEOUT'
 export const SET_USERS = 'SET_USERS'
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
 
 export function setUsers (users) {
   return({
@@ -8,9 +9,14 @@ export function setUsers (users) {
   })
 }
 
-export function setTimeout (timeout) {
+export function increment () {
   return({
-    type: SET_TIMEOUT,
-    timeout: timeout
+    type: INCREMENT,
+  })
+}
+
+export function decrement () {
+  return({
+    type: DECREMENT,
   })
 }

@@ -4,7 +4,6 @@
   "description": "React Basic Redux Application inspired by react started kit (https://www.reactstarterkit.com/)",
   "scripts": {
     "start": "npm-run-all --parallel start:dev lint:watch",
-    "start:production": "start --verbose",
     "start:dev": "babel-node tools/run start",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "eslint src",
