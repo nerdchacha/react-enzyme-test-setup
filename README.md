@@ -15,6 +15,12 @@ The project has the following things incorporated
 
 ____
 
+## PROJECT SETUP
+
++ Make sure to run `cp .env.example .env` command for the first time after you clone the repo
+
+___
+
 + **`npm run start`** to run the server in development mode through webpack middleware.
 
   To access the server, navigate to `http://localhost:3001`
