@@ -5,7 +5,6 @@
   "scripts": {
     "start": "npm-run-all --parallel start:dev lint:watch",
     "start:dev": "babel-node tools/run start",
-    "open:src": "babel-node tools/srcServer.js",
     "lint": "eslint src",
     "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi",
     "lint:watch": "esw src -w",
