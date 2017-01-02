@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { increment, decrement } from '../actions'
 
@@ -25,8 +25,17 @@ class Counter extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    count: state.counter.count
+    count: state.counter.count,
   }
+}
+
+Counter.propTypes = {
+  dispatch: PropTypes.func ,
+  count: PropTypes.number.isRequired,
+}
+
+Counter.defaultProps = {
+  count: 0,
 }
 
 export default connect(

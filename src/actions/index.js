@@ -5,7 +5,7 @@ export const DECREMENT = 'DECREMENT'
 export function setUsers (users) {
   return({
     type: SET_USERS,
-    users: users
+    users: users,
   })
 }
 

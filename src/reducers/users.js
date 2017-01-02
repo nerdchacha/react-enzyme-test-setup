@@ -6,7 +6,7 @@ const users = function (state = initialState, action) {
   switch (action.type) {
     case SET_USERS:
       return {
-        users: action.users
+        users: action.users,
       }
     default:
       return state

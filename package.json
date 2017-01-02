@@ -8,6 +8,8 @@
     "lint": "eslint src",
     "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi",
     "lint:watch": "esw src -w",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:changed:fix": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST --fix; fi",
     "clean": "babel-node tools/run clean",
     "copy": "babel-node tools/run copy",
     "bundle": "babel-node tools/run bundle",
