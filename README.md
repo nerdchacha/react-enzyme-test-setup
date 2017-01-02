@@ -6,7 +6,7 @@ The project has the following things incorporated
 
 1. Express server running through webpack middleware
 2. esling configured with some defult rules
-3. babel-node setup to write full ES^ code in node
+3. babel-node setup to write full ES6 code in node
 4. precommit hook setup to run custom script before any git commit
 5. webpack plugins configured to create optimized and minimized production build
 6. basic redux code setup
@@ -36,6 +36,10 @@ ___
   To access the server, navigate to `http://localhost:3000`
 
 + **`npm run lint:changed`** to run eslint against the last changes files
+
++ **`npm run lint:fix`** to run lint autofix on all the files
+
++ **`npm run lint:changed:fix`** to run lint autofix only on changed files
 
 + `precommmit` is configured to run `eslint` before any commits
   Make sure you fix all lint errors before commiting your code
