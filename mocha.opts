@@ -1,0 +1,4 @@
+--recursive
+--require ./test/tools/setup.js
+--timeout 15000
+--slow 150

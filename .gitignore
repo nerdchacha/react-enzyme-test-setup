@@ -27,7 +27,7 @@ build/Release
 node_modules
 
 #dist folder
-dist
+build
 
 #Webstorm metadata
 .idea
@@ -37,3 +37,6 @@ dist
 
 # dotenv file
 .env
+
+#log folder
+log

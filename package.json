@@ -2,9 +2,14 @@
   "name": "react-redux-basic",
   "version": "1.0.0",
   "description": "React Basic Redux Application inspired by react started kit (https://www.reactstarterkit.com/)",
+  "engines": {
+    "node": ">=7.0",
+    "npm": ">=3.3"
+  },
   "scripts": {
     "start": "npm-run-all --parallel start:dev lint:watch",
     "start:dev": "babel-node tools/run start",
+    "start:production": "babel-node tools/run start --release",
     "lint": "eslint src",
     "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi",
     "lint:watch": "esw src -w",
@@ -14,7 +19,8 @@
     "copy": "babel-node tools/run copy",
     "bundle": "babel-node tools/run bundle",
     "build": "babel-node tools/run build",
-    "build:production": "NODE_ENV=production npm run build -- --release"
+    "build:production": "NODE_ENV=production npm run build -- --release",
+    "test:local": "env NODE_ENV=test PORT=3002 mocha --opts mocha.opts"
   },
   "precommit": {
     "run": [
