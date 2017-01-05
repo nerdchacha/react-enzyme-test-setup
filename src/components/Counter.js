@@ -14,7 +14,7 @@ class Counter extends Component {
     }
     return(
       <div>
-        Current counter value = {this.props.count}
+        Current counter value = <span className="counter-value">{this.props.count}</span>
         &nbsp;
         <button onClick={handleIncrement}>Increment</button>
         <button onClick={handleDecrement}>Decrement</button>
