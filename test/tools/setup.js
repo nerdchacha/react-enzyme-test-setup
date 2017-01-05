@@ -1,19 +1,19 @@
 global.__DEV__ = false
 
 let noop = () => {
-  return null;
+  return null
 }
 
 //Run test files using ES6
-require('babel-register')();
+require('babel-register')()
 
 let jsdom = require('jsdom')
 
 ///Do not require files with extension while testing
-require.extensions['.scss'] = noop;
-require.extensions['.css'] = noop;
-require.extensions['.png'] = noop;
-require.extensions['.svg'] = noop;
+require.extensions['.scss'] = noop
+require.extensions['.css'] = noop
+require.extensions['.png'] = noop
+require.extensions['.svg'] = noop
 
 //Set browser object on global
 global.document = jsdom.jsdom({src: '<!doctype html><html><body></body></html>'})
