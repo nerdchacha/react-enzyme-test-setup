@@ -16,8 +16,8 @@ class Counter extends Component {
       <div>
         Current counter value = <span className="counter-value">{this.props.count}</span>
         &nbsp;
-        <button onClick={handleIncrement}>Increment</button>
-        <button onClick={handleDecrement}>Decrement</button>
+        <button className="increment" onClick={handleIncrement}>Increment</button>
+        <button className="decrement" onClick={handleDecrement}>Decrement</button>
       </div>
     )
   }

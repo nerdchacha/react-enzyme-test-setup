@@ -4,18 +4,21 @@ let noop = () => {
   return null
 }
 
-//Run test files using ES6
+// Run test files using ES6
 require('babel-register')()
 
 let jsdom = require('jsdom')
 
-///Do not require files with extension while testing
+// Do not require files with extension while testing
 require.extensions['.scss'] = noop
 require.extensions['.css'] = noop
 require.extensions['.png'] = noop
 require.extensions['.svg'] = noop
 
-//Set browser object on global
+// Setup page timeout global
+global.PAGE_TIMEOUT = 1000
+
+// Set browser object on global
 global.document = jsdom.jsdom({src: '<!doctype html><html><body></body></html>'})
 global.window = document.defaultView
 Object.keys(document.defaultView).forEach((property) => {

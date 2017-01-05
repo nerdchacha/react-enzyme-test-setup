@@ -109,6 +109,7 @@
     "replace": "^0.3.0",
     "rimraf": "2.5.2",
     "scss-loader": "0.0.1",
+    "sleep-promise": "^2.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "1.13.0",
